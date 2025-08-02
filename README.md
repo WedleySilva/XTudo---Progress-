@@ -27,7 +27,7 @@ Este projeto tem como objetivo centralizar o gerenciamento de uma hamburgueria a
 
 Abaixo está o diagrama entidade-relacionamento que representa o modelo de dados utilizado no sistema:
 
-![Modelo de Dados Hamburgueria](./)
+![Modelo de Dados Hamburgueria](./tables-XTudo.png)
 
 **Descrição do Modelo**:
 - A tabela `CIDADES` possui cidades que podem ter vários `CLIENTES`.
