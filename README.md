@@ -25,7 +25,54 @@ Este projeto tem como objetivo centralizar o gerenciamento de uma hamburgueria a
 
 ### 🗂️ Modelo de Dados
 
-Abaixo está o diagrama entidade-relacionamento que representa o modelo de dados utilizado no sistema:
+Abaixo está a organização e o diagrama entidade-relacionamento que representa o modelo de dados utilizado no sistema:
+
+## 📋 Estrutura das Tabelas
+
+### 🏙️ Tabela: Cidades
+| Campo       | Tipo de Dado | Flags | Formato   |
+|-------------|--------------|-------|-----------|
+| CodCidade   | integer      | im    | `>>>>9`   |
+| NomCidade   | character    | m     | `x(30)`   |
+| CodUF       | character    | m     | `x(2)`    |
+
+
+### 👥 Tabela: Clientes
+| Campo       | Tipo de Dado | Flags | Formato   |
+|-------------|--------------|-------|-----------|
+| CodCliente  | integer      | im    | `>>>>9`   |
+| Endereco    | character    |       | `x(50)`   |
+| CodCidade   | integer      | im    | `>>>>9`   |
+| Observacao  | character    |       | `x(60)`   |
+| NomCliente  | character    | m     | `x(30)`   |
+
+
+### 📦 Tabela: Itens
+| Campo         | Tipo de Dado | Flags | Formato        |
+|---------------|--------------|-------|----------------|
+| CodPedido     | integer      | im    | `>>>>9`        |
+| CodItem       | integer      | im    | `>>>>9`        |
+| CodProduto    | integer      | im    | `>>>>9`        |
+| NumQuantidade | integer      | m     | `>>>>9`        |
+| ValTotal      | decimal(2)   | m     | `>>>>>>>9.99`  |
+
+### 🧾 Tabela: Pedidos
+| Campo       | Tipo de Dado | Flags | Formato        |
+|-------------|--------------|-------|----------------|
+| CodPedido   | integer      | im    | `>>>>9`        |
+| CodCliente  | integer      | im    | `>>>>9`        |
+| DatPedido   | date         | m     | `99/99/9999`   |
+| ValPedido   | decimal(2)   | m     | `>>>>>>>9.99`  |
+| Observacao  | character    |       | `x(60)`        |
+
+### 🍔 Tabela: Produtos
+| Campo       | Tipo de Dado | Flags | Formato        |
+|-------------|--------------|-------|----------------|
+| CodProduto  | integer      | im    | `->,>>>,>>9`   |
+| NomProduto  | character    | m     | `x(60)`        |
+| ValProduto  | decimal(2)   | m     | `>>>>>>>9.99`  |
+
+### Diagrama Entidade-Relacionamento
 
 ![Modelo de Dados Hamburgueria](./tables-XTudo.png)
 
@@ -68,7 +115,7 @@ Abaixo está o diagrama entidade-relacionamento que representa o modelo de dados
 
 Este sistema foi desenvolvido em **Progress OpenEdge 12.8 (64 bits)** e exige a configuração adequada para codificação e testes locais.
 
-### 3.1 ✅ Pré-requisitos
+### 3.1 ✅ Pré-requisitos (nesse caso)
 
 - **Java JDK 20.0.2**
 - **Progress OpenEdge 12.8 for Classroom Edition**
@@ -81,10 +128,7 @@ Este sistema foi desenvolvido em **Progress OpenEdge 12.8 (64 bits)** e exige a 
 3. Vá em **Propriedades do Sistema > Variáveis de Ambiente**
 4. Em **Variáveis do Sistema**, adicione:
    - `JAVA_HOME` com o valor `C:\java\jdk-20`
-   - Edite a variável `PATH` e adicione ao final:  
-   ```text
-   %JAVA_HOME%\bin
-   ```
+   - Edite a variável `PATH` e adicione ao final: ` %JAVA_HOME%\bin `
 
 ### 3.3 📦 Instalação do Progress OpenEdge
 
@@ -99,7 +143,6 @@ Este sistema foi desenvolvido em **Progress OpenEdge 12.8 (64 bits)** e exige a 
    - Clique em **Install**
    - Finalize com **Finish**
 
----
 
 ### 3.4 🚀 Testando o Ambiente
 
@@ -109,17 +152,43 @@ Após a instalação:
   - `Progress > GUI Procedure Editor 12.8 (64 Bits)`
 - Você verá o ambiente de desenvolvimento pronto para compilar e testar os arquivos `.p` do projeto.
 
----
 
-### 3.5 🛠️ Próximos passos
+### 3.5 🛠️ Próximos Passos — Usando o Banco e Arquivos Disponibilizados
 
-Com o ambiente instalado, agora você pode:
+Após configurar o ambiente, é necessário carregar o banco de dados e executar os programas. O projeto já está estruturado para ser usado a partir de **`C:\treinamento`**, que será reconhecido automaticamente pelo **PROPATH**.
 
-- Criar o banco de dados `xtudo.db` em `C:\dados\`
-- Importar os arquivos `.df` e `.d` fornecidos no repositório
-- Rodar os programas `.p` via Procedure Editor
 
-Exemplo de execução:
+### 3.5.1 📂 Estrutura dos Arquivos do Projeto
 
-```shell
-prowin32 -p menu.p -db c:\dados\xtudo.db
+```
+C:\treinamento
+├── bd\ # Banco de dados (.db, .bi, .lg, etc.)
+├── src\ # Arquivos .p do sistema
+├── bd\backup\ # Backup limpo do banco
+└── README.md
+```
+
+### 3.5.2 🗄️ Abrindo o Banco no Progress
+
+1.  No **Procedure Editor**, abra o menu **Tools \> Database \> Connect**.
+2.  Clique em **Browse** e selecione **`XTudo.db`** na pasta `C:\treinamento\bd`.
+3.  Como o diretório já está no PROPATH, não é necessário informar caminho adicional.
+4.  Marque **No-Login Required** para evitar senha.
+
+### 3.5.3 📜 Executando o Sistema
+
+1.  No **Procedure Editor**, abra `menu.p` que está em `C:\treinamento\src`.
+2.  Como a pasta já está no PROPATH, o professor também poderá rodar apenas com:
+
+```abl
+RUN menu.p.
+```
+
+Pressione F2 para iniciar o sistema.
+
+### 3.5.4 💾 Restaurando Banco de Dados Limpo
+
+1.  Feche o banco no Procedure Editor.
+2.  Apague os arquivos da pasta `C:\treinamento\bd`.
+3.  Copie os arquivos de `C:\treinamento\bd\backup` para `C:\treinamento\bd`.
+4.  Reconecte o banco e rode novamente.
