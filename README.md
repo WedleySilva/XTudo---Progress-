@@ -155,36 +155,6 @@ Após a instalação:
 
 ### 3.5 🛠️ Próximos Passos — Usando o Banco e Arquivos Disponibilizados
 
-Após configurar o ambiente, é necessário carregar o banco de dados e executar os programas. O projeto já está estruturado para ser usado a partir de **`C:\treinamento`**, que será reconhecido automaticamente pelo **PROPATH**.
-
-
-### 3.5.1 📂 Estrutura dos Arquivos do Projeto
-
-```
-C:\treinamento
-├── bd\ # Banco de dados (.db, .bi, .lg, etc.)
-├── src\ # Arquivos .p do sistema
-├── bd\backup\ # Backup limpo do banco
-└── README.md
-```
-
-### 3.5.2 🗄️ Abrindo o Banco no Progress
-
-1.  No **Procedure Editor**, abra o menu **Tools \> Database \> Connect**.
-2.  Clique em **Browse** e selecione **`XTudo.db`** na pasta `C:\treinamento\bd`.
-3.  Como o diretório já está no PROPATH, não é necessário informar caminho adicional.
-4.  Marque **No-Login Required** para evitar senha.
-
-### 3.5.3 📜 Executando o Sistema
-
-1.  No **Procedure Editor**, abra `menu.p` que está em `C:\treinamento\src`.
-2.  Como a pasta já está no PROPATH, o professor também poderá rodar apenas com:
-
-```abl
-RUN menu.p.
-```
-
-Pressione F2 para iniciar o sistema.
 
 ### 3.5.4 💾 Restaurando Banco de Dados Limpo
 
