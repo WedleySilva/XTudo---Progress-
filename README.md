@@ -189,6 +189,61 @@ Após a instalação:
   - `Progress > GUI Procedure Editor 12.8 (64 Bits)`
 - Você verá o ambiente de desenvolvimento pronto para compilar e testar os arquivos `.p` do projeto.
 
+## 3.5 🛠️ Próximos Passos — Usando o Banco e Arquivos Disponibilizados
 
-### 3.5 🛠️ Próximos Passos — Usando o Banco e Arquivos Disponibilizados
+### **Preparação dos Arquivos**
+
+1. **Baixe o Projeto:**  
+   Faça o download do projeto diretamente do GitHub utilizando a opção **Download ZIP**.
+
+2. **Extraia os Arquivos:**  
+   Descompacte o arquivo `.zip`. As pastas `Xtudo-Progress` e `treinamento` devem ser extraídas diretamente na raiz do disco `C:\`.
+
+   **Estrutura de diretórios esperada:**
+   
+`C:\Xtudo-Progress`
+
+`C:\treinamento`
+
+---
+
+### **Configuração do Atalho**
+
+1. **Crie o Atalho:**  
+Na pasta `C:\Xtudo-Progress`, crie um atalho para o executável do **Progress OpenEdge**.  
+O executável geralmente está localizado em:
+`C:\Progress\OpenEdge\bin\prowin.exe`
+
+2. **Modifique o Destino:**  
+- Clique com o botão direito no atalho criado.  
+- Selecione **Propriedades**.  
+- No campo **Destino**, insira o seguinte comando completo:
+  ```bash
+  C:\Progress\OpenEdge\bin\prowin.exe -p _desk.p -db c:/treinamento/xtudo.db -1 -d dmy -E
+  ```
+  **Observação:** A parte `-db c:/treinamento/xtudo.db -1` é responsável por conectar o sistema ao banco de dados.
+
+3. **Execute o Atalho:**  
+Dê um duplo clique no atalho para iniciar o sistema.  
+O ambiente Progress OpenEdge será aberto, já conectado ao banco de dados.
+
+---
+
+### **Configuração do ProPath**
+
+1. **Acesse o ProPath:**  
+No menu superior do ambiente Progress, vá em:
+`Tools > ProPath`
+
+2. **Adicione o Diretório:**  
+Adicione o seguinte caminho para garantir que o sistema encontre todos os recursos e arquivos do projeto:
+
+`C:/Xtudo-Progress`
+
+4. **Salve as Alterações:**  
+Salve as modificações para que o novo caminho seja incluído.
+
+---
+
+✅ **Pronto!** Seu ambiente **Xtudo-Progress** está configurado e pronto para uso.
 
