@@ -192,10 +192,3 @@ Após a instalação:
 
 ### 3.5 🛠️ Próximos Passos — Usando o Banco e Arquivos Disponibilizados
 
-
-### 3.5.4 💾 Restaurando Banco de Dados Limpo
-
-1.  Feche o banco no Procedure Editor.
-2.  Apague os arquivos da pasta `C:\treinamento\bd`.
-3.  Copie os arquivos de `C:\treinamento\bd\backup` para `C:\treinamento\bd`.
-4.  Reconecte o banco e rode novamente.
