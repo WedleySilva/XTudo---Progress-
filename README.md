@@ -243,7 +243,25 @@ Adicione o seguinte caminho para garantir que o sistema encontre todos os recurs
 4. **Salve as Alterações:**  
 Salve as modificações para que o novo caminho seja incluído.
 
----
-
 ✅ **Pronto!** Seu ambiente **Xtudo-Progress** está configurado e pronto para uso.
 
+---
+
+### Como Executar o Projeto
+
+1. **Acesse o PRO Tools:**  
+   No menu principal do **Progress OpenEdge**, vá até:
+
+   `Tools > PRO Tools`
+   
+2. **Inicie a Execução:**  
+Na janela do **PRO Tools**, clique no botão **RUN** para abrir a tela de execução de procedimentos.
+
+3. **Informe o Procedimento Principal:**  
+No campo **Name of Procedure To Run**, digite o caminho completo do arquivo inicial do sistema:
+
+`C:/Xtudo-Progress/Main.p`
+
+4. **Confirme e Execute:**  
+Pressione **OK** ou **Enter** para iniciar.  
+O sistema irá carregar e executar o procedimento informado, abrindo a aplicação principal.
