@@ -1,0 +1,112 @@
+=====================================================
+PROGRESS stack trace as of Sat Aug  2 21:12:55 2025
+=====================================================
+
+Progress OpenEdge Release 12.8 build 1207 on WINNT 
+
+Startup parameters:
+-pf C:\Progress\OpenEdge\startup.pf,-cpinternal ISO8859-1,-cpstream ISO8859-1,-cpcoll Basic,-cpcase Basic,-d mdy,-numsep 44,-numdec 46,(end .pf),-wy,-nosplash,-debugalert,-inp 16000,-tok 4000,-rereadnolock,-s 200,-mmax 65534,-h 80,-T C:/OpenEdge/WRK,-p C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_server.p
+
+Exception code: C0000005 ACCESS_VIOLATION
+Fault address:  00007FFC80B42769 01:0000000000011769 C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll
+
+Registers:
+RAX:0000000000000000
+RBX:00000000FFFFFFFF
+RCX:FFFFFFFFFFFBFB40
+RDX:0000000000000000
+RSI:000002E1B118EDE8
+RDI:000002E1B11CF000
+R8 :FFFFFFFFFFFFFFD8
+R9 :000002E1B118EB68
+R10:00007FFC80B30000
+R11:0000000000000000
+R12:000002E1ABB18D70
+R13:000000E7E62FADE0
+R14:000002E1ABE1B238
+R15:000002E1906E2610
+CS:RIP:0033:00007FFC80B42769
+SS:RSP:002B:000000E7E62FAC30  RBP:000000E7E62FAD40
+DS:002B  ES:002B  FS:0053  GS:002B
+Flags:00010202
+
+
+Debugging dll: C:\Progress\OpenEdge\bin\DBGHELP.DLL
+Symbol Path:
+ C:\Progress\OpenEdge\bin;C:\Progress\OpenEdge\pdbfiles
+
+
+Call Stack:
+Address           Frame
+00007FFC80B42769  000000E7E62FAC30  memmove+699
+00007FFBC327D811  000000E7E62FB340  utalignedfree+111AD1
+00007FFBC329AAD9  000000E7E62FB380  utalignedfree+12ED99
+00007FFBC3299695  000000E7E62FB3B0  utalignedfree+12D955
+00007FFBC3289BED  000000E7E62FB870  utalignedfree+11DEAD
+00007FFBC2F8878E  000000E7E62FBAD0  ProStartup+47F8E
+00007FFBC2F5B33F  000000E7E62FBD00  ProStartup+1AB3F
+00007FFBC2F5C592  000000E7E62FBF30  ProStartup+1BD92
+00007FFBC2FE11B5  000000E7E62FC3C0  ProStartup+A09B5
+00007FFBC2FBC131  000000E7E62FC460  ProStartup+7B931
+00007FFBC3341718  000000E7E62FCF40  sm_oearchPrepro+1B88
+00007FFBC3283DE2  000000E7E62FD2C0  utalignedfree+1180A2
+00007FFBC3285ABA  000000E7E62FD990  utalignedfree+119D7A
+00007FFBC32865D9  000000E7E62FDA70  utalignedfree+11A899
+00007FFBC328009C  000000E7E62FDAA0  utalignedfree+11435C
+00007FFBC3286C11  000000E7E62FDAE0  utalignedfree+11AED1
+00007FFBC31E5CDF  000000E7E62FDDC0  utalignedfree+79F9F
+00007FFBC327429C  000000E7E62FDE70  utalignedfree+10855C
+00007FFBC328009C  000000E7E62FDEA0  utalignedfree+11435C
+00007FFBC3076B4C  000000E7E62FDF80  ProStartup+13634C
+00007FFBC355B87C  000000E7E62FE070  rcUpgradeRecord+E13FC
+00007FFBC3565C81  000000E7E62FE0A0  rcUpgradeRecord+EB801
+00007FFBC3678E5D  000000E7E62FE0F0  Progress::ClrBridge::rnProFromClr::runEventDispatcher+1D
+00007FFC205F4F6E  000000E7E62FE0F8  0000:0000000000000000 
+0000000000000001  000000E7E62FE100  0000:0000000000000000 
+00000000C0000005  000000E7E62FE108  0000:0000000000000000 
+000000E7E62F98B0  000000E7E62FE110  0000:0000000000000000 
+00007FFC9A218ECB  000000E7E62FE170  GetWindowDpiAwarenessContext+20B
+000000E7E62FE390  000000E7E62FE178  0000:0000000000000000 
+
+
+** ABL Stack Trace **
+
+--> C:\Users\wedle\Progress\Developer Studio 12.8\workspace\.metadata\.plugins\com.openedge.pdt.project\/Xtudo-Progress/ at line 10  (C:\Users\wedle\Progress\Developer Studio 12.8\workspace\.metadata\.plugins\com.openedge.pdt.project\\Xtudo-Progress\Xtudo-Progress\..\compile_tmp_9206649.p)
+    C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_idecompile.p at line 135  (C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_idecompile.p)
+    executeCmd C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_server.p at line 265  (C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_server.p)
+    ReceiveCommand C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_socketclient.p at line 497  (C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_socketclient.p)
+    wait C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_wait.p at line 38  (C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_wait.p)
+    SendWaitRequest C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_socketclient.p at line 184  (C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_socketclient.p)
+    checkHasHelp adecomm/oeideservice.p at line 1166  (adecomm/oeideservice.r)
+    adecomm/_adehelp.p at line 529  (adecomm/_adehelp.r)
+    USER-INTERFACE-TRIGGER adedict/_dcttran.p at line 5009  (adedict/_dcttran.r)
+    adedict/_dcttran.p at line 7346  (adedict/_dcttran.r)
+    adedict/_dictg.p at line 6257  (adedict/_dictg.r)
+    _dict.r at line 433  (C:\Progress\OpenEdge\gui\_dict.r)
+    runproc c:\progress\openedge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_serverdefault.p at line 137  (c:\progress\openedge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_serverdefault.p)
+    executeCmd C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_server.p at line 255  (C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_server.p)
+    ReceiveCommand C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_socketclient.p at line 497  (C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_socketclient.p)
+    C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_server.p at line 174  (C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_server.p)
+
+** Persistent procedures/Classes **
+
+Handle  File Name
+002145  C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_wait.p
+002144  adecomm/oeideservice.r
+001010  c:\progress\openedge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_serverdefault.p
+001009  c:\users\wedle\progress\developer studio 12.8\workspace\.metadata\.plugins\com.openedge.pdt.core\.runtime\org.sonarlint.eclipse.pdt\oe\slintsch.p
+001008  c:\progress\openedge\oeide\eclipse\plugins\com.openedge.pdt.ve_12.8.0.00\runtime\_ideveruntime.p
+001007  c:\progress\openedge\oeide\eclipse\plugins\com.openedge.pdt.text_12.8.0.00\runtime\_idetxtruntime.p
+001006  c:\progress\openedge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_idewsruntime.p
+001005  c:\progress\openedge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_idedbruntime.p
+001004  c:\progress\openedge\oeide\eclipse\plugins\com.openedge.pdt.oestudio_12.8.0.00\runtime\_abruntime.p
+001002  C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_socketclient.p
+001001  C:\Progress\OpenEdge\oeide\eclipse\plugins\com.openedge.pdt.project_12.8.0.00\runtime\_oeidecontext.p
+
+** PROPATH **
+C:\Users\wedle\Progress\Developer Studio 12.8\workspace\Xtudo-Progress,C:\Progress\OpenEdge\gui\,C:\Progress\OpenEdge\gui\adecomm.pl,C:\Progress\OpenEdge\gui\adecomp.pl,C:\Progress\OpenEdge\gui\adedict.pl,C:\Progress\OpenEdge\gui\adeedit.pl,C:\Progress\OpenEdge\gui\adeicon.pl,C:\Progress\OpenEdge\gui\adeshar.pl,C:\Progress\OpenEdge\gui\adeuib.pl,C:\Progress\OpenEdge\gui\adeweb.pl,C:\Progress\OpenEdge\gui\adexml.pl,C:\Progress\OpenEdge\gui\dataadmin.pl,C:\Progress\OpenEdge\gui\prodict.pl,C:\Progress\OpenEdge\gui\protools.pl,C:\Progress\OpenEdge\gui\OpenEdge.Core.pl,C:\Progress\OpenEdge\gui\OpenEdge.BusinessLogic.pl,C:\Progress\OpenEdge\gui\netlib\OpenEdge.Net.pl,C:\Progress\OpenEdge,C:\Progress\OpenEdge\bin,C:\Progress\OpenEdge\gui,C:\Progress\OpenEdge\gui\ablunit.apl,C:\Progress\OpenEdge\gui\adecomm.apl,C:\Progress\OpenEdge\gui\adedict.apl,C:\Progress\OpenEdge\gui\adeicon.apl,C:\Progress\OpenEdge\gui\dataadmin.apl,C:\Progress\OpenEdge\gui\OpenEdge.BusinessLogic.apl,C:\Progress\OpenEdge\gui\OpenEdge.Core.apl,C:\Progress\OpenEdge\gui\OpenEdge.ServerAdmin.apl,C:\Progress\OpenEdge\gui\prodict.apl,C:\Progress\OpenEdge\gui\adedesk.pl,C:\Progress\OpenEdge\gui\aderes.pl
+
+** Databases (logical/type/physical) **
+   xtudo               PROGRESS  C:/treinamento/xtudo
+
+** End of Protrace **
