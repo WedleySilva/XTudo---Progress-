@@ -265,3 +265,12 @@ No campo **Name of Procedure To Run**, digite o caminho completo do arquivo inic
 4. **Confirme e Execute:**  
 Pressione **OK** ou **Enter** para iniciar.  
 O sistema irá carregar e executar o procedimento informado, abrindo a aplicação principal.
+
+---
+## 3. Clique para ver o Vídeo!
+
+[![Assista ao vídeo](https://img.youtube.com/vi/zVzFbVJkLYg/maxresdefault.jpg)](https://www.youtube.com/watch?v=zVzFbVJkLYg)
+
+---
+
+
