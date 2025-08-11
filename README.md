@@ -84,6 +84,45 @@ Abaixo está a organização e o diagrama entidade-relacionamento que representa
 
 ---
 
+### 1.2 Estrutura das Pastas
+
+O projeto está organizado de forma modular, contendo as seguintes pastas na raiz do diretório `XTudo---Progress/`:
+
+- **`treinamento/`**: Contém códigos e exemplos para aprendizado e prática com a linguagem Progress 4GL.
+- **`Xtudo-Progress/`**: Contém o sistema principal da Hamburgueria XTudo.
+
+### Detalhamento dos Diretórios
+
+#### **treinamento/**
+
+Esta pasta é dedicada ao aprendizado e à prática com a linguagem Progress 4GL. Ela serve como um ambiente de testes e exemplos.
+
+- **Conteúdo:** Inclui procedimentos e programas simples criados para explorar conceitos como:
+  - Manipulação de banco de dados (CRUD).
+  - Navegação de registros.
+  - Exportação de dados.
+
+- **Propósito:** Funciona como uma base para testar funcionalidades e técnicas antes de implementá-las no sistema principal.  
+  É uma fonte de consulta para trechos de código que podem ser reutilizados.
+
+---
+
+#### **Xtudo-Progress/**
+
+Esta pasta contém o sistema principal da Hamburgueria XTudo. É aqui que o software de fato reside.
+
+- **Conteúdo:** Inclui os arquivos `.p` (procedures) que gerenciam as principais funcionalidades do sistema:
+  - Cadastro de cidades, clientes e produtos.
+  - Gerenciamento de pedidos e itens.
+
+- **Regras de Negócio:** Diversas regras de negócio estão implementadas diretamente neste código, incluindo:
+  - Geração automática de códigos sequenciais.
+  - Bloqueio de exclusão de registros com dependências.
+  - Atualização automática de valores totais de pedidos.
+  - Exportação de dados para os formatos CSV e JSON.
+
+- **Fluxo do Sistema:** Esta pasta define o fluxo completo de navegação entre as telas e a integração de todas as funcionalidades do projeto.
+
 ## 2. 🧠 Regras de Negócio
 
 ### 2.1 📍 Cadastro de Cidades
