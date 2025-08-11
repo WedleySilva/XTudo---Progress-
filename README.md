@@ -68,7 +68,7 @@ Abaixo está a organização e o diagrama entidade-relacionamento que representa
 ### 🍔 Tabela: Produtos
 | Campo       | Tipo de Dado | Flags | Formato        |
 |-------------|--------------|-------|----------------|
-| CodProduto  | integer      | im    | `->,>>>,>>9`   |
+| CodProduto  | integer      | im    | `>>>>9`   |
 | NomProduto  | character    | m     | `x(60)`        |
 | ValProduto  | decimal(2)   | m     | `>>>>>>>9.99`  |
 
