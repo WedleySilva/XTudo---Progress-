@@ -105,8 +105,6 @@ Esta pasta é dedicada ao aprendizado e à prática com a linguagem Progress 4GL
 - **Propósito:** Funciona como uma base para testar funcionalidades e técnicas antes de implementá-las no sistema principal.  
   É uma fonte de consulta para trechos de código que podem ser reutilizados.
 
----
-
 #### **Xtudo-Progress/**
 
 Esta pasta contém o sistema principal da Hamburgueria XTudo. É aqui que o software de fato reside.
