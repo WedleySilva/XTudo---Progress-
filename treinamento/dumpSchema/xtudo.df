@@ -1,0 +1,264 @@
+ADD TABLE "Cidades"
+  AREA "Schema Area"
+  DESCRIPTION "Cidades com codigo, nome e UF."
+  DUMP-NAME "cidades"
+
+ADD FIELD "CodCidade" OF "Cidades" AS integer 
+  FORMAT ">>>>9"
+  INITIAL ""
+  LABEL "Codigo"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "NomCidade" OF "Cidades" AS character 
+  FORMAT "x(30)"
+  INITIAL ""
+  LABEL "Cidade"
+  POSITION 3
+  MAX-WIDTH 60
+  ORDER 20
+  MANDATORY
+
+ADD FIELD "CodUF" OF "Cidades" AS character 
+  FORMAT "x(2)"
+  INITIAL ""
+  LABEL "UF"
+  POSITION 4
+  MAX-WIDTH 4
+  ORDER 30
+  MANDATORY
+
+ADD INDEX "CodCidade" ON "Cidades" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "CodCidade" ASCENDING 
+
+ADD TABLE "Clientes"
+  AREA "Schema Area"
+  DESCRIPTION "Clientes com seus devidos dados."
+  DUMP-NAME "clientes"
+
+ADD FIELD "CodCliente" OF "Clientes" AS integer 
+  FORMAT ">>>>9"
+  INITIAL ""
+  LABEL "Código"
+  POSITION 5
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "Endereco" OF "Clientes" AS character 
+  FORMAT "x(50)"
+  INITIAL ""
+  LABEL "Endereço"
+  POSITION 6
+  MAX-WIDTH 100
+  ORDER 20
+
+ADD FIELD "CodCidade" OF "Clientes" AS integer 
+  FORMAT ">>>>9"
+  INITIAL ""
+  LABEL "Cidade"
+  POSITION 7
+  MAX-WIDTH 4
+  ORDER 30
+  MANDATORY
+
+ADD FIELD "Observacao" OF "Clientes" AS character 
+  FORMAT "x(60)"
+  INITIAL ""
+  LABEL "Observação"
+  POSITION 8
+  MAX-WIDTH 120
+  ORDER 40
+
+ADD FIELD "NomCliente" OF "Clientes" AS character 
+  FORMAT "x(30)"
+  INITIAL ""
+  LABEL "Nome"
+  POSITION 9
+  MAX-WIDTH 60
+  ORDER 50
+  MANDATORY
+
+ADD INDEX "CodCliente" ON "Clientes" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "CodCliente" ASCENDING 
+
+ADD INDEX "CodCidade" ON "Clientes" 
+  AREA "Schema Area"
+  INDEX-FIELD "CodCidade" ASCENDING 
+
+ADD TABLE "Itens"
+  AREA "Schema Area"
+  DESCRIPTION "Itens dos pedidos com produto, quantidade e valor."
+  DUMP-NAME "itens"
+
+ADD FIELD "CodPedido" OF "Itens" AS integer 
+  FORMAT ">>>>9"
+  INITIAL ""
+  LABEL "Pedido"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "CodItem" OF "Itens" AS integer 
+  FORMAT ">>>>9"
+  INITIAL ""
+  LABEL "Item"
+  POSITION 3
+  MAX-WIDTH 4
+  ORDER 20
+  MANDATORY
+
+ADD FIELD "CodProduto" OF "Itens" AS integer 
+  FORMAT ">>>>9"
+  INITIAL ""
+  LABEL "Produto"
+  POSITION 4
+  MAX-WIDTH 4
+  ORDER 30
+  MANDATORY
+
+ADD FIELD "NumQuantidade" OF "Itens" AS integer 
+  FORMAT ">>>>9"
+  INITIAL ""
+  LABEL "Quantidade"
+  POSITION 5
+  MAX-WIDTH 4
+  ORDER 40
+  MANDATORY
+
+ADD FIELD "ValTotal" OF "Itens" AS decimal 
+  FORMAT ">>>>>>>9.99"
+  INITIAL ""
+  LABEL "Valor Total"
+  POSITION 6
+  MAX-WIDTH 17
+  DECIMALS 2
+  ORDER 50
+  MANDATORY
+
+ADD INDEX "CodItem" ON "Itens" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "CodItem" ASCENDING 
+
+ADD INDEX "CodPedido" ON "Itens" 
+  AREA "Schema Area"
+  INDEX-FIELD "CodPedido" ASCENDING 
+
+ADD INDEX "CodProduto" ON "Itens" 
+  AREA "Schema Area"
+  INDEX-FIELD "CodProduto" ASCENDING 
+
+ADD TABLE "Pedidos"
+  AREA "Schema Area"
+  DESCRIPTION "Pedidos realizados por clientes com data e valor."
+  DUMP-NAME "pedidos"
+
+ADD FIELD "CodPedido" OF "Pedidos" AS integer 
+  FORMAT ">>>>9"
+  INITIAL ""
+  LABEL "Pedido"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "CodCliente" OF "Pedidos" AS integer 
+  FORMAT ">>>>9"
+  INITIAL ""
+  LABEL "Cliente"
+  POSITION 3
+  MAX-WIDTH 4
+  ORDER 20
+  MANDATORY
+
+ADD FIELD "DatPedido" OF "Pedidos" AS date 
+  FORMAT "99/99/9999"
+  INITIAL "Today"
+  LABEL "Data"
+  POSITION 4
+  MAX-WIDTH 4
+  ORDER 30
+  MANDATORY
+
+ADD FIELD "ValPedido" OF "Pedidos" AS decimal 
+  FORMAT ">>>>>>>9.99"
+  INITIAL ""
+  LABEL "Total"
+  POSITION 5
+  MAX-WIDTH 17
+  DECIMALS 2
+  ORDER 40
+  MANDATORY
+
+ADD FIELD "Observacao" OF "Pedidos" AS character 
+  FORMAT "x(60)"
+  INITIAL ""
+  LABEL "Observação"
+  POSITION 6
+  MAX-WIDTH 120
+  ORDER 50
+
+ADD INDEX "CodPedido" ON "Pedidos" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "CodPedido" ASCENDING 
+
+ADD INDEX "CodCliente" ON "Pedidos" 
+  AREA "Schema Area"
+  INDEX-FIELD "CodCliente" ASCENDING 
+
+ADD TABLE "Produtos"
+  AREA "Schema Area"
+  DESCRIPTION "Produtos com codigo, nome e valor."
+  DUMP-NAME "produtos"
+
+ADD FIELD "CodProduto" OF "Produtos" AS integer 
+  FORMAT "->,>>>,>>9"
+  INITIAL ""
+  LABEL "Código"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "NomProduto" OF "Produtos" AS character 
+  FORMAT "x(60)"
+  INITIAL ""
+  LABEL "Produto"
+  POSITION 3
+  MAX-WIDTH 120
+  ORDER 20
+  MANDATORY
+
+ADD FIELD "ValProduto" OF "Produtos" AS decimal 
+  FORMAT ">>>>>>>9.99"
+  INITIAL ""
+  LABEL "Valor"
+  POSITION 4
+  MAX-WIDTH 17
+  DECIMALS 2
+  ORDER 30
+  MANDATORY
+
+ADD INDEX "CodProduto" ON "Produtos" 
+  AREA "Schema Area"
+  PRIMARY
+  INDEX-FIELD "CodProduto" ASCENDING 
+
+.
+PSC
+cpstream=ISO8859-1
+.
+0000004921
