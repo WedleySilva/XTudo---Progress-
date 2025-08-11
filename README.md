@@ -271,6 +271,15 @@ O sistema irá carregar e executar o procedimento informado, abrindo a aplicaç�
 
 [![Assista ao vídeo](https://img.youtube.com/vi/zVzFbVJkLYg/maxresdefault.jpg)](https://www.youtube.com/watch?v=zVzFbVJkLYg)
 
+## Sobre o Autor
+
+**Wedley Silva Schmoeller**  
+Estudante de Engenharia de Software, apaixonado por programação, tecnologia e desenvolvimento de soluções práticas.
+
+🔗 [Meu portfólio online](https://wedley.vercel.app)  
+🔗 [LinkedIn](https://linkedin.com/in/wedley-silva-schmoeller-809104247)  
+🔗 [GitHub](https://github.com/WedleySilva)
+
 ---
 
-
+Obrigado por visitar o projeto! Qualquer dúvida ou sugestão, fique à vontade para entrar em contato.
